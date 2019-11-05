@@ -12,19 +12,19 @@ The following function shows one way to solve the problem but the code is not id
 Refactor the code based on what you have learned about code simplicity and efficiency.
 """
 
-def my_function(X):
+def my_function(Hypotenuse):
     solutions = []
-    for x in range(5, X):
-        for y in range(4, X):
-            for z in range(3, X):
-                if (x*x==y*y+z*z):
-                    solutions.append([x, y, z])
-    m = 0
+    for hypo in range(5, Hypotenuse):
+        for adjacent in range(4, Hypotenuse):
+            for opposite in range(3, Hypotenuse):
+                if (hypo*hypo==adjacent*adjacent+opposite*opposite):
+                    solutions.append([hypo, adjacent, opposite])
+    maximum = 0
     for solution in solutions:
-        if m < max(solution):
-            m = max(solution)
-    return m
+        if maximum < max(solution):
+            maximum = max(solution)
+    return maximum
 
-X = input("What is the maximal length of the triangle side? Enter a number: ")
+Hypotenuse = input("What is the maximal length of the triangle side? Enter a number: ")
 
-print("The longest side possible is " + str(my_function(int(X))))
+print("The longest side possible is " + str(my_function(int(Hypotenuse))))
