@@ -2,7 +2,7 @@ import random
 import string
 import sys
 def RandomStringGenerator(l=12):
-    randomer = string.ascii_letters + string.digits
+    randomer = string.ascii_lowercase + string.digits
     p = 0
     s = ''
     while p<l:
